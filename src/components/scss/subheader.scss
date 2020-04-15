@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.subheader {
+  padding-top: $spacing-medium;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  @media (min-width: $bp-large) {
+    justify-content: space-around;
+  }
+
+  align-items: flex-start;
+
+  a {
+    display: inline-block;
+
+    p {
+      text-align: center;
+    }
+
+    min-width: 100px;
+    max-width: 140px;
+
+    &:hover p {
+      color: $color-primary;
+    }
+
+    img {
+      transition: all 240ms ease-in-out;
+      padding: $spacing-small 40px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
