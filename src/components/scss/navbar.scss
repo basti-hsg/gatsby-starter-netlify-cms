@@ -1,0 +1,75 @@
+@import "./variables.scss";
+$navbar-dropdown-arrow: $color-primary;
+
+.navbar-wrapper {
+  background-color: $gray-100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  .logo-wrapper {
+    display: inline-block;
+    max-width: 300px;
+    img {
+      margin-left: -5px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .navbar-top {
+    padding-bottom: $spacing-small;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    .hersteller-bar {
+      display: flex;
+      align-items: center;
+      a {
+        border: 1px solid $gray-400;
+        background-color: white;
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        padding: 4px;
+        margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    background-color: $gray-100;
+
+    .navbar-start {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .logo-wrapper-desktop {
+      float: left;
+      max-width: 220px;
+      margin-top: 4px;
+    }
+
+    @media (min-width: 1024px) {
+      .logo-wrapper-desktop {
+        display: none;
+      }
+    }
+
+    .navbar-item,
+    .navbar-link {
+      color: $color-primary;
+    }
+  }
+}
